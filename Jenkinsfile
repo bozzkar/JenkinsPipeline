@@ -22,7 +22,9 @@ node {
     stage "Scan Docker Image"
 
     stage "Source Code Static Analysis"
-        
+       sh "gem install brakeman"
+       sh "brakeman"
+
     stage "Kubernetes Analysis"
 
     stage "Deploy"
