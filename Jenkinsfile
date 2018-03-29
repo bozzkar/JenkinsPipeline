@@ -22,8 +22,8 @@ node {
     stage "Scan Docker Image"
 
     stage "Source Code Static Analysis"
-       sh "gem install brakeman"
-       sh "brakeman"
+       sh "go get -u golang.org/x/lint/golint"
+       sh "golint ./*.go"
 
     stage "Kubernetes Analysis"
 
