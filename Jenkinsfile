@@ -22,7 +22,6 @@ node {
     stage "Scan Docker Image"
 
     stage "Source Code Static Analysis"
-       sh "go get -u golang.org/x/lint/golint"
        sh "golint ./*.go"
 
     stage "Kubernetes Analysis"
